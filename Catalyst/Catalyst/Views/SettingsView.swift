@@ -100,7 +100,7 @@ struct SettingsView: View {
                     }
                     Button(action: {
                         showIndicator = true
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                             showIndicator = false
                         }
                     }) {

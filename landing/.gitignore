@@ -1,0 +1,8 @@
+# Cruft
+.DS_Store
+node_modules
+
+.now
+.next/
+
+.vercel
