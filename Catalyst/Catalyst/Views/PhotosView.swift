@@ -16,10 +16,13 @@ struct PhotosView: View {
         
     var body: some View {
         NavigationView {
-            GeometryReader { geo in
                 if (!(showPhotos.showPhoto)) {
-                    Text("No photos uploaded!!")
+                    VStack {
+                        Text("No photos uploaded!!")
+                            .navigationTitle("Library")
+                    }
                 } else {
+                GeometryReader { geo in
                     ScrollView {
                         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())], spacing: 4) {
                             ForEach(photos, id: \.self) { photo in
