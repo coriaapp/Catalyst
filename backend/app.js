@@ -1,8 +1,14 @@
 const express = require('express');
 const { Polybase } = require('@polybase/client');
 const { ethPersonalSign } = require('@polybase/eth');
+const { ENS } = require('@ensdomains/ensjs');
+const { ethers, JsonRpcProvider } = require('ethers');
 const app = express();
 const port = 3000;
+
+const provider = new JsonRpcProvider("https://mainnet.infura.io/v3/6e92ae9db8e3403481172d06ee1e409a")
+
+const ENSInstance = new ENS()
 
 // Initialize the Polybase client
 const db = new Polybase({
@@ -102,6 +108,22 @@ app.post('/store-images', async (req, res) => {
     }
 });
 
+app.post('/get-ens-name', async (req, res) => {
+    try {
+      await ENSInstance.setProvider(provider)
+      const { walletAddress } = req.body;
+        const profile = await ENSInstance.getProfile(
+          walletAddress
+        ) 
+        console.log(profile)
+        res.status(200).json({ success: true, message: profile });
+    } catch (error) {
+        // Return an error response
+        console.log(error)
+        res.status(500).json(error);
+    }
+  });
+
 async function startServer(Initialize = false) {
     // Initialize Polybase
 
@@ -114,5 +136,6 @@ async function startServer(Initialize = false) {
         console.log(`Server running on http://localhost:${port}`);
     });
 }
+
 
 startServer(true);
