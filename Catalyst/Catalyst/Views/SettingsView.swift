@@ -92,7 +92,7 @@ struct SettingsView: View {
                         Button(action: {
                             showingSheet.toggle()
                             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                                connected = "0x059...5234"
+                                connected = "shreyaspapi.eth"
                             }
                         }) {
                             SettingsButton(imageName: "walletconnect", title: connected, localImage: true)

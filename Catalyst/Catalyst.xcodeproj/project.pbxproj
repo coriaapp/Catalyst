@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EA36B0C92A3C767300EA345D /* WalletConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36B0C82A3C767300EA345D /* WalletConnectView.swift */; };
+		EA36B0CB2A3CD3DC00EA345D /* ens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36B0CA2A3CD3DC00EA345D /* ens.swift */; };
 		EA446DF22A33340A00CE0367 /* UploadIpfs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA446DF12A33340A00CE0367 /* UploadIpfs.swift */; };
 		EA969D5D2A30C799009276F5 /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA969D5C2A30C799009276F5 /* PhotoDetailView.swift */; };
 		EA969D5F2A30CD01009276F5 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA969D5E2A30CD01009276F5 /* InfoView.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		EA36B0C82A3C767300EA345D /* WalletConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletConnectView.swift; sourceTree = "<group>"; };
+		EA36B0CA2A3CD3DC00EA345D /* ens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ens.swift; sourceTree = "<group>"; };
 		EA446DF12A33340A00CE0367 /* UploadIpfs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadIpfs.swift; sourceTree = "<group>"; };
 		EA969D5C2A30C799009276F5 /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailView.swift; sourceTree = "<group>"; };
 		EA969D5E2A30CD01009276F5 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				EA446DF12A33340A00CE0367 /* UploadIpfs.swift */,
+				EA36B0CA2A3CD3DC00EA345D /* ens.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				EAADBFA82A2DD880009F047D /* CatalystApp.swift in Sources */,
 				EAADBFBA2A2DEC80009F047D /* PhotosView.swift in Sources */,
 				EAADBFBD2A2DF3C5009F047D /* GiveFullAccessView.swift in Sources */,
+				EA36B0CB2A3CD3DC00EA345D /* ens.swift in Sources */,
 				EA969D5F2A30CD01009276F5 /* InfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
