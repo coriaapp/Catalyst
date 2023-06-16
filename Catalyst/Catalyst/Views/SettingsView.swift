@@ -8,6 +8,10 @@
 import SwiftUI
 import ActivityIndicatorView
 
+class AppViewModel: ObservableObject {
+    @Published var showPhoto = false
+}
+
 struct SettingsView: View {
     
     @State var showIndicator = false
@@ -15,6 +19,8 @@ struct SettingsView: View {
     @State private var showingSheet = false
     
     @State private var connected = "Connect"
+    
+    @EnvironmentObject var showPhoto: AppViewModel
     
     var body: some View {
         GeometryReader { geo in
@@ -100,9 +106,10 @@ struct SettingsView: View {
                     }
                     Button(action: {
                         showIndicator = true
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
                             showIndicator = false
                         }
+                        showPhoto.showPhoto = true
                     }) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 30)

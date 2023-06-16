@@ -11,10 +11,16 @@ import Photos
 struct PhotosView: View {
     @State private var photos: [PHAsset] = []
     
+    @EnvironmentObject var showPhotos: AppViewModel
+
+        
     var body: some View {
         NavigationView {
             GeometryReader { geo in
-                ScrollView {
+                if (!(showPhotos.showPhoto)) {
+                    Text("No photos uploaded!!")
+                } else {
+                    ScrollView {
                         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())], spacing: 4) {
                             ForEach(photos, id: \.self) { photo in
                                 NavigationLink(destination: PhotoDetailView(photo: photo)) {
@@ -31,6 +37,7 @@ struct PhotosView: View {
                     .onAppear {
                         fetchPhotos()
                     }
+                }
             }
         }
     }
@@ -65,5 +72,6 @@ struct PhotosView: View {
 struct PhotosView_Previews: PreviewProvider {
     static var previews: some View {
         PhotosView()
+            .environmentObject(AppViewModel())
     }
 }
