@@ -1,7 +1,9 @@
 # Catalyst
 
+https://the-freaking-catalyst.vercel.app
+
 [![EthGlobal Showcase](https://img.shields.io/badge/EthGlobal-Showcase-blue)](https://www.ethglobal.com/showcase/catalyst-a8i6j)
-[![YouTube](https://img.shields.io/badge/YouTube-Demo-red)](https://www.youtube.com/watch?v=your-youtube-url)
+[![YouTube](https://img.shields.io/badge/YouTube-Demo-red)](https://youtu.be/7q7mAynYrRc)
 
 Catalyst is an innovative app that revolutionizes the way you store and manage your photos and videos. It offers unlimited storage capacity on your phone, completely free of charge. Say goodbye to storage limitations and keep your entire media library at your fingertips.
 
