@@ -65,6 +65,9 @@ struct PhotosView: View {
         manager.requestImage(for: asset, targetSize: CGSize(width: 1080, height: 1080), contentMode: .aspectFill, options: options) { result, _ in
             if let result = result {
                 image = result
+                uploadImageToIPFS(image, completion: { result in
+                    print(result)
+                })
             }
         }
         return image

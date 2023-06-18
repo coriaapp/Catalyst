@@ -21,7 +21,7 @@ func uploadImageToIPFS(_ image: UIImage, completion: @escaping (Result<String, E
     requestBody.append(Data("\(lineBreak)--\(boundary)--\(lineBreak)".utf8))
     
     // Create the URL request
-    let url = URL(string: "https://ipfs.infura.io:5001/api/v0/add")!
+    let url = URL(string: "http://127.0.0.1:5001/api/v0/add")!
     var request = URLRequest(url: url)
     request.httpMethod = "POST"
     request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")

@@ -35,7 +35,7 @@ struct SettingsView: View {
                 }
                 .padding(.top)
                 
-                Text("Jane Doe")
+                Text((connected == "Connect") ? "....." : "Jane.eth")
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                     .padding(.leading)
@@ -63,12 +63,12 @@ struct SettingsView: View {
                         
                         Spacer()
 
-                        Text("Jane Doe")
+                        Text((connected == "Connect") ? "....." : "Jane Doe")
                             .font(.system(size: 18))
                             .fontWeight(.semibold)
                         
                         HStack {
-                            Text("johndoe@gmail.com")
+                            Text((connected == "Connect") ? ".....@...com" : "janedoe@gmail.com")
                                 .font(.system(size: 16))
                                 .fontWeight(.medium)
                                 .foregroundColor(.gray)
@@ -98,7 +98,7 @@ struct SettingsView: View {
                         Button(action: {
                             showingSheet.toggle()
                             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                                connected = "jane.eth"
+                                connected = "0x3A...e3B"
                             }
                         }) {
                             SettingsButton(imageName: "walletconnect", title: connected, localImage: true)
