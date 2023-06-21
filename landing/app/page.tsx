@@ -67,7 +67,7 @@ const Page = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://youtube.com"
+              href="https://www.youtube.com/watch?v=7q7mAynYrRc&feature=youtu.be"
             >
               <Image
                 className="transition ease-in-out  hover:scale-105  duration-100 saturate-0 hover:saturate-100"
