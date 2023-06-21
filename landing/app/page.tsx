@@ -4,6 +4,7 @@ import React from 'react'
 import Github from '../public/github.png'
 import Youtube from '../public/youtube.png'
 import Mobile from './mobile'
+import Discord from '../public/discord.png'
 import { motion } from 'framer-motion'
 
 const Page = () => {
@@ -75,6 +76,20 @@ const Page = () => {
                 height={20}
                 alt="Youtube"
                 src={Youtube}
+              />
+            </a>
+
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://discord.gg/CMvEG6APxW"
+            >
+              <Image
+                className="transition ease-in-out  hover:scale-105  duration-100 saturate-0 hover:saturate-100"
+                width={100}
+                height={30}
+                alt="Discord"
+                src={Discord}
               />
             </a>
           </motion.div>
