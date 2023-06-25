@@ -1,6 +1,15 @@
 export default function Head() {
   return (
     <>
+      <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZS0KEQKSX9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZS0KEQKSX9');
+</script>
       <title>The Freaking Catalyst</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta
